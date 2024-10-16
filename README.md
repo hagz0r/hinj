@@ -46,7 +46,7 @@ hinj.exe <process_name> <dll_path>
 **Example**:
 
 ```sh
-hinj.exe Bodycam-Win64-Shipping.exe C:\path\to\your\dll\bodycam.dll
+hinj.exe myexecutable.exe payload.dll
 ```
 
 ---
