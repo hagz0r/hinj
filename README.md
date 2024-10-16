@@ -1,18 +1,13 @@
 # hinj 
 
-## Overview
-
-This project implements a robust **Dynamic Link Library (DLL) Injector** using the **Rust** programming language, designed to inject a DLL into the address space of a running Windows process. It leverages key Windows APIs such as `OpenProcess`, `VirtualAllocEx`, `WriteProcessMemory`, and `CreateRemoteThread` to facilitate the injection process. The injector ensures compatibility with processes by addressing critical challenges such as **Address Space Layout Randomization (ASLR)** and thread synchronization.
-
-The primary use case for this injector is testing and instrumentation of software, allowing you to load external code into processes for debugging, monitoring, or extending functionality. This injector is built with an emphasis on performance, memory safety, and system-level integrity.
 
 ---
 ## Features
 
-- **ASLR-aware Injection**: Dynamically calculates the correct address of `LoadLibraryA` in the target process, ensuring compatibility with modern systems using Address Space Layout Randomization.
-- **Remote Thread Execution**: Injects the specified DLL into the target process by creating a remote thread that executes `LoadLibraryA` to load the DLL.
-- **Memory Allocation in Remote Process**: Allocates memory in the target process and writes the DLL path into it using `VirtualAllocEx` and `WriteProcessMemory`.
-- **Thread Synchronization**: Waits for the injected remote thread to finish execution, ensuring that the DLL has been properly loaded.
+- **ASLR-aware Injection**
+- **Remote Thread Execution**
+- **Memory Allocation in Remote Process**
+- **Thread Synchronization**
 
 ---
 ## Prerequisites
